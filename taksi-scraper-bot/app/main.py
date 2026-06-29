@@ -25,12 +25,21 @@ async def handle_message(client: Client, message: Message):
         print(f"✅ Yuborildi!")
     except Exception as e:
         print(f"❌ Xato: {e}")
-
 async def main():
     print("🚀 Bot ishga tushdi...")
-    await app.start()
-    print(f"📡 Tayyor!")
-    await idle()
+
+    try:
+        await app.start()
+        print("✅ app.start() ishladi")
+
+        me = await app.get_me()
+        print(f"Kirdi: {me.id} | {me.first_name}")
+
+        print("📡 Tayyor!")
+        await idle()
+
+    except Exception as e:
+        print(f"❌ XATO: {type(e).__name__}: {e}")
 
 if __name__ == "__main__":
     asyncio.run(main())
