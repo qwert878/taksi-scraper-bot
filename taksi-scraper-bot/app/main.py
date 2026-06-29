@@ -1,4 +1,5 @@
 import asyncio
+from pyrogram.idle import idle
 from pyrogram import Client
 from pyrogram.types import Message
 from app.config import API_ID, API_HASH, SESSION_STRING, TARGET_GROUP
@@ -28,7 +29,8 @@ async def handle_message(client: Client, message: Message):
 async def main():
     print("🚀 Bot ishga tushdi...")
     await app.start()
-    await asyncio.Event().wait()
+    print(f"📡 Tayyor!")
+    await idle()
 
 if __name__ == "__main__":
     asyncio.run(main())
