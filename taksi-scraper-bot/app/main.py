@@ -4,7 +4,11 @@ from pyrogram import Client
 from pyrogram.types import Message
 from app.config import API_ID, API_HASH, SESSION_STRING, TARGET_GROUP
 from app.keywords import is_taxi_request
+from app.config import API_ID, API_HASH, SESSION_STRING
 
+print("API_ID:", API_ID)
+print("API_HASH mavjud:", bool(API_HASH))
+print("SESSION mavjud:", bool(SESSION_STRING))
 app = Client(
     name="taksi_scraper",
     api_id=API_ID,
