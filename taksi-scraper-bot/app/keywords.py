@@ -6,7 +6,7 @@ KEYWORDS = [
     "такси", "машина нужна", "нужна машина",
     "заказ", "заявка", "отвезите",
     "аэропорт", "вокзал",
-    "need car", "need taxi", "olamiz", "odam olamiz",
+    "need car", "need taxi", "olamiz", "odam olamiz", "Toshkent", ",Toshkentga",
 ]
 
 def is_taxi_request(text: str) -> bool:
