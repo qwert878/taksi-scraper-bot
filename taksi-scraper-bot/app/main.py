@@ -44,6 +44,20 @@ async def main():
         await idle()
 
     except Exception as e:
+        print(f"❌ XATO: {type(e).__name__}: {e}")async def main():
+    print("🚀 Bot ishga tushdi...")
+
+    try:
+        await app.start()
+        print("START OK")
+
+        me = await app.get_me()
+        print(f"Kirdi: {me.id} | {me.first_name}")
+
+        print("📡 Tayyor!")
+        await idle()
+
+    except Exception as e:
         print(f"❌ XATO: {type(e).__name__}: {e}")
 
 if __name__ == "__main__":
